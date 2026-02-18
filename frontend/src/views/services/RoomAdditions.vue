@@ -15,7 +15,7 @@ import CTASection from '@/components/CTASection.vue'
   <!-- Intro -->
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-px bg-af-accent"></div>
@@ -38,7 +38,7 @@ import CTASection from '@/components/CTASection.vue'
   <!-- Room Additions Done Right -->
   <section class="py-24 lg:py-32 bg-af-light">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div>
           <img src="/images/renovation2.jpeg" alt="Room addition construction" class="w-full max-w-sm mx-auto shadow-2xl" loading="lazy">
         </div>

@@ -12,11 +12,11 @@
       </div>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6">Ready For Your Next Project?</h2>
       <p class="text-white/60 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">For nearly 40 years we have provided Cincinnati homeowners with the highest quality contractor service in the industry.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <router-link to="/get-started" class="bg-af-accent text-white px-10 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-af-accent-light transition-all duration-300">
+      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+        <router-link to="/get-started" class="bg-af-accent text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-af-accent-light transition-all duration-300 text-center">
           Start Your Project
         </router-link>
-        <router-link to="/contact-us" class="border border-white/30 text-white px-10 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-white/10 transition-all duration-300">
+        <router-link to="/contact-us" class="border border-white/30 text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-white/10 transition-all duration-300 text-center">
           Contact Us
         </router-link>
       </div>

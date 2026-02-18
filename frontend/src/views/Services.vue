@@ -14,7 +14,7 @@ import CTASection from '@/components/CTASection.vue'
   <!-- Kitchen -->
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-px bg-af-accent"></div>
@@ -39,7 +39,7 @@ import CTASection from '@/components/CTASection.vue'
   <!-- Bathroom -->
   <section class="py-24 lg:py-32 bg-af-warm">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div class="order-2 lg:order-1 relative mx-auto w-3/4 overflow-hidden rounded-lg">
           <img src="/images/bathroom.jpeg" alt="High-end bathroom remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
           <div class="absolute inset-0 bg-af-dark/10"></div>
@@ -64,7 +64,7 @@ import CTASection from '@/components/CTASection.vue'
   <!-- Room Additions -->
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-px bg-af-accent"></div>
@@ -89,7 +89,7 @@ import CTASection from '@/components/CTASection.vue'
   <!-- Home Builder -->
   <section class="py-24 lg:py-32 bg-af-warm">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div class="order-2 lg:order-1 relative overflow-hidden rounded-lg">
           <img src="/images/oakley-leed-platinum-build-01-400x284.jpeg" alt="New home construction by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
           <div class="absolute inset-0 bg-af-dark/10"></div>

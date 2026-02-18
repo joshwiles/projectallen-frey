@@ -46,7 +46,7 @@ async function handleSubmit() {
     <h3 v-if="heading" class="text-2xl font-heading font-bold text-af-text mb-2">{{ heading }}</h3>
     <p v-if="description" class="text-af-gray mb-8 leading-relaxed">{{ description }}</p>
 
-    <div v-if="submitted" class="border border-af-accent/30 bg-af-accent/5 p-10 text-center">
+    <div v-if="submitted" class="border border-af-accent/30 bg-af-accent/5 p-6 md:p-10 text-center">
       <svg class="w-14 h-14 text-af-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/></svg>
       <h4 class="text-xl font-heading font-bold text-af-text mb-2">Thank You</h4>
       <p class="text-af-gray">We've received your message and will get back to you shortly.</p>
@@ -88,7 +88,7 @@ async function handleSubmit() {
         <label for="contact-message" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Message <span class="text-af-accent">*</span></label>
         <textarea id="contact-message" v-model="form.message" required rows="5" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200 resize-y" placeholder="Tell us about your project..."></textarea>
       </div>
-      <button type="submit" :disabled="submitting" class="bg-af-accent text-white px-10 py-4 font-semibold text-sm uppercase tracking-wide hover:bg-af-accent-light transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+      <button type="submit" :disabled="submitting" class="w-full sm:w-auto bg-af-accent text-white px-8 py-4 font-semibold text-sm uppercase tracking-wide hover:bg-af-accent-light transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
         {{ submitting ? 'Sending...' : 'Send Message' }}
       </button>
     </form>

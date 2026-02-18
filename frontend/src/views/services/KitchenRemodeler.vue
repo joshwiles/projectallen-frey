@@ -15,7 +15,7 @@ import CTASection from '@/components/CTASection.vue'
   <!-- Dream Kitchen Intro -->
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center">
         <div>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-px bg-af-accent"></div>
@@ -45,34 +45,34 @@ import CTASection from '@/components/CTASection.vue'
         </div>
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text">Kitchen Remodeling Services</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
         <!-- Countertops -->
-        <div class="bg-white p-8 shadow-lg">
+        <div class="bg-white p-6 md:p-8 shadow-lg">
           <h3 class="text-xl font-heading font-bold text-af-text mb-4">Countertops</h3>
           <p class="text-af-gray leading-relaxed">Trends are changing. The counter-tops of today vary greatly from the counter-tops of yesterday. Installing a clean updated look with a new counter-top can make all the difference. Granite counters are no longer the only premium choice. Quartz stone comes in colors and patterns that provide a clean look and are less porous. There has also been a return of the chunky butcher block counters. We can help you pick what's best for your home.</p>
         </div>
         <!-- Cabinets -->
-        <div class="bg-white p-8 shadow-lg">
+        <div class="bg-white p-6 md:p-8 shadow-lg">
           <h3 class="text-xl font-heading font-bold text-af-text mb-4">Cabinets</h3>
           <p class="text-af-gray leading-relaxed">Kitchen cabinets are the crown of the room. We work with quality suppliers for semi-custom and custom cabinets. The styles are seemingly unlimited! Oak, maple, cherry and hickory are all popular wood choices for kitchen cabinets.</p>
         </div>
         <!-- Backsplash -->
-        <div class="bg-white p-8 shadow-lg">
+        <div class="bg-white p-6 md:p-8 shadow-lg">
           <h3 class="text-xl font-heading font-bold text-af-text mb-4">Backsplash</h3>
           <p class="text-af-gray leading-relaxed">A beautiful backsplash adds style, elegance, and personality to your kitchen. This is where your personality can stand out. With a creative backsplash, you can raise the value of your home. We also recommend them to make cleanups faster and easier.</p>
         </div>
         <!-- Island Designs -->
-        <div class="bg-white p-8 shadow-lg">
+        <div class="bg-white p-6 md:p-8 shadow-lg">
           <h3 class="text-xl font-heading font-bold text-af-text mb-4">Island Designs</h3>
           <p class="text-af-gray leading-relaxed">Create more counter space and a bonus of storage easily with an island. Modern kitchen islands are designed with both practicality and entertaining in mind. Many clients choose to add an additional bar area so that when company comes over they have somewhere extra to sit.</p>
         </div>
         <!-- Appliance Installation -->
-        <div class="bg-white p-8 shadow-lg">
+        <div class="bg-white p-6 md:p-8 shadow-lg">
           <h3 class="text-xl font-heading font-bold text-af-text mb-4">Appliance Installation</h3>
           <p class="text-af-gray leading-relaxed">A brand new kitchen deserves premium appliances. Seeking high-end options such as Viking, Thermador, Gaggenau, Miele, Sub-Zero & Wolf and/or La Cornue? We can help you with your selection, from standard to premium. Our kitchen design and remodeling team install and test your appliances to ensure everything is as it should be.</p>
         </div>
         <!-- Design -->
-        <div class="bg-white p-8 shadow-lg">
+        <div class="bg-white p-6 md:p-8 shadow-lg">
           <h3 class="text-xl font-heading font-bold text-af-text mb-4">Design</h3>
           <p class="text-af-gray leading-relaxed">Allen & Frey have an amazing team that will make your design dreams a reality. We know the kitchen is the heart of the home. We work with you in decision making to get the design, color and materials right. Even the smallest details are made a focus.</p>
         </div>
@@ -83,7 +83,7 @@ import CTASection from '@/components/CTASection.vue'
   <!-- Knocking Down Walls + CTA -->
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center">
         <div>
           <img src="/images/Kitchen2.jpeg" alt="Kitchen layout redesign by Allen & Frey" class="w-full max-w-md mx-auto shadow-2xl" loading="lazy">
         </div>

@@ -12,7 +12,7 @@ import ContactForm from '@/components/ContactForm.vue'
 
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
         <!-- Form -->
         <ContactForm
           heading="Send Us a Message"
@@ -21,7 +21,7 @@ import ContactForm from '@/components/ContactForm.vue'
 
         <!-- Contact Info -->
         <div>
-          <div class="bg-af-light p-10">
+          <div class="bg-af-light p-6 md:p-10">
             <h3 class="text-2xl font-heading font-bold text-af-text mb-8">Contact Information</h3>
             <div class="space-y-8">
               <a href="tel:5138716679" class="flex items-center gap-5 group">
