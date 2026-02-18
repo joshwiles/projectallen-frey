@@ -28,8 +28,9 @@ import CTASection from '@/components/CTASection.vue'
             <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </router-link>
         </div>
-        <div>
-          <img src="/images/the-overlook-40-510x382.jpeg" alt="Chef-quality kitchen remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+        <div class="relative mx-auto w-3/4 overflow-hidden rounded-lg">
+          <img src="/images/Kitchen.jpeg" alt="Chef-quality kitchen remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
       </div>
     </div>
@@ -39,8 +40,9 @@ import CTASection from '@/components/CTASection.vue'
   <section class="py-24 lg:py-32 bg-af-warm">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="order-2 lg:order-1">
-          <img src="/images/hyde-park-bath-update-02-400x284.jpeg" alt="High-end bathroom remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+        <div class="order-2 lg:order-1 relative mx-auto w-3/4 overflow-hidden rounded-lg">
+          <img src="/images/bathroom.jpeg" alt="High-end bathroom remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
         <div class="order-1 lg:order-2">
           <div class="flex items-center gap-3 mb-4">
@@ -76,8 +78,9 @@ import CTASection from '@/components/CTASection.vue'
             <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </router-link>
         </div>
-        <div>
+        <div class="relative overflow-hidden rounded-lg">
           <img src="/images/east-walnut-hille-project-01-400x284.jpeg" alt="Room addition project by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
       </div>
     </div>
@@ -87,8 +90,9 @@ import CTASection from '@/components/CTASection.vue'
   <section class="py-24 lg:py-32 bg-af-warm">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="order-2 lg:order-1">
+        <div class="order-2 lg:order-1 relative overflow-hidden rounded-lg">
           <img src="/images/oakley-leed-platinum-build-01-400x284.jpeg" alt="New home construction by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
         <div class="order-1 lg:order-2">
           <div class="flex items-center gap-3 mb-4">

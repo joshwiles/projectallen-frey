@@ -2,14 +2,19 @@
 defineProps({
   subtitle: String,
   title: String,
-  description: String
+  description: String,
+  compact: Boolean,
+  image: {
+    type: String,
+    default: '/images/the-overlook-40-510x382.jpeg'
+  }
 })
 </script>
 
 <template>
-  <section class="relative bg-af-dark text-white py-28 md:py-36 -mt-20 overflow-hidden">
+  <section :class="['relative bg-af-dark text-white -mt-20 overflow-hidden', compact ? 'py-14 md:py-18' : 'py-28 md:py-36']">
     <div class="absolute inset-0 opacity-20">
-      <img src="/images/the-overlook-40-510x382.jpeg" alt="" class="w-full h-full object-cover" aria-hidden="true">
+      <img :src="image" alt="" class="w-full h-full object-cover" aria-hidden="true">
     </div>
     <div class="absolute inset-0 bg-gradient-to-b from-af-dark/60 via-af-dark/90 to-af-dark"></div>
     <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center pt-10">

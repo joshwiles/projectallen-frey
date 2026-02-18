@@ -27,6 +27,12 @@ const services = [
     title: 'New Construction',
     description: 'Custom-built dream homes focused on quality construction, premium materials, and the details that matter.',
     link: '/services/home-builder'
+  },
+  {
+    icon: '/images/home-maintenance-icon-01.svg',
+    title: 'Home Maintenance',
+    description: 'Professional home maintenance services for homeowners who want quality updates without the DIY hassle.',
+    link: '/services/home-maintenance'
   }
 ]
 
@@ -104,12 +110,12 @@ const stats = [
         </div>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-af-text">Our Services</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="flex flex-wrap justify-center gap-8">
         <router-link
           v-for="service in services"
           :key="service.title"
           :to="service.link"
-          class="group text-center p-8 lg:p-10 border border-af-border hover:border-af-accent/30 transition-all duration-500 hover:shadow-lg"
+          class="group text-center p-8 lg:p-10 border border-af-border hover:border-af-accent/30 transition-all duration-500 hover:shadow-lg w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]"
         >
           <img :src="service.icon" :alt="service.title + ' icon'" class="w-14 h-14 mx-auto mb-6 group-hover:scale-110 transition-transform duration-500" width="56" height="56">
           <h3 class="text-lg font-heading font-bold text-af-text mb-3 group-hover:text-af-accent transition-colors duration-300">{{ service.title }}</h3>

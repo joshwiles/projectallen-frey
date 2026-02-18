@@ -48,13 +48,14 @@ const filteredProjects = computed(() => {
       <!-- Project Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <transition-group name="fade">
-          <div v-for="project in filteredProjects" :key="project.title" class="group relative overflow-hidden cursor-pointer aspect-[4/3]">
-            <img :src="project.image" :alt="project.title" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-af-dark/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <span class="text-af-accent text-xs font-semibold uppercase tracking-wider">{{ project.categories.join(' / ') }}</span>
-              <h3 class="text-white font-heading font-bold text-lg mt-1">{{ project.title }}</h3>
-            </div>
+          <div v-for="project in filteredProjects" :key="project.title" class="group relative overflow-hidden cursor-pointer aspect-[4/3] rounded-lg">
+              <img :src="project.image" :alt="project.title" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+              <div class="absolute inset-0 bg-af-dark/10"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-af-dark/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <span class="text-af-accent text-xs font-semibold uppercase tracking-wider">{{ project.categories.join(' / ') }}</span>
+                <h3 class="text-white font-heading font-bold text-lg mt-1">{{ project.title }}</h3>
+              </div>
           </div>
         </transition-group>
       </div>
