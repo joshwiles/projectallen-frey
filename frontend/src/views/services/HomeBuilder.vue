@@ -93,21 +93,6 @@ import CTASection from '@/components/CTASection.vue'
     </div>
   </section>
 
-  <!-- Hire Us Banner -->
-  <section class="py-20 bg-af-dark">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-      <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">Hire Us to Build Your Dream Home Today!</h2>
-      <p class="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">At Allen & Frey, our home building construction team is your team. We will give your dream home the attention it deserves. The project manager will keep you in the loop every step of the way. We Build From the Ground Up!</p>
-      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-        <router-link to="/get-started" class="bg-af-accent text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-af-accent-light transition-all duration-300 text-center">
-          Start Your Project
-        </router-link>
-        <router-link to="/contact-us" class="border border-white/30 text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-white/10 transition-all duration-300 text-center">
-          Contact Us
-        </router-link>
-      </div>
-    </div>
-  </section>
 
   <ProcessSection />
   <CTASection />

@@ -1,5 +1,11 @@
+<script setup>
+defineProps({
+  bg: { type: String, default: 'bg-af-light' }
+})
+</script>
+
 <template>
-  <section class="py-24 lg:py-32 bg-af-light">
+  <section :class="['py-24 lg:py-32', bg]">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-16">
         <div class="flex items-center justify-center gap-3 mb-4">

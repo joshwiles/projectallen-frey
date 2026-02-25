@@ -1,24 +1,95 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import PageHero from '@/components/PageHero.vue'
 import CTASection from '@/components/CTASection.vue'
 
-const activeFilter = ref('All')
-
-const filters = ['All', 'Bathroom', 'Deck', 'Kitchen', 'Room Additions']
-
-const projects = [
-  { title: 'The Overlook', image: '/images/the-overlook-40-400x284.jpeg', categories: ['Bathroom', 'Kitchen', 'Room Additions'] },
-  { title: 'Oakley LEED Platinum Build', image: '/images/oakley-leed-platinum-build-01-400x284.jpeg', categories: ['Room Additions'] },
-  { title: 'Hyde Park Bath Update', image: '/images/hyde-park-bath-update-02-400x284.jpeg', categories: ['Bathroom', 'Kitchen'] },
-  { title: 'Hyde Park 3rd Floor Bath', image: '/images/hyde-park-3rd-floor-bath-01-400x284.jpeg', categories: ['Bathroom'] },
-  { title: 'East Walnut Hills Project', image: '/images/east-walnut-hille-project-01-400x284.jpeg', categories: ['Deck'] },
-  { title: 'Columbia Township Deck', image: '/images/columbia-township-deck-06-400x284.jpeg', categories: ['Deck'] },
+const sections = [
+  {
+    title: 'Bathrooms',
+    cover: '/images/Bathroom.jpg',
+    images: [
+      { src: '/images/Bathroom.jpg', caption: 'Bathroom Remodel' },
+      { src: '/images/Bathroom2.jpg', caption: 'Bathroom Renovation' },
+    ],
+  },
+  {
+    title: 'Kitchens',
+    cover: '/images/Kitchen.jpg',
+    images: [
+      { src: '/images/Kitchen.jpg', caption: 'Kitchen Remodel' },
+      { src: '/images/Kitchen.jpeg', caption: 'Kitchen Renovation' },
+      { src: '/images/Kitchen2.jpeg', caption: 'Kitchen Update' },
+    ],
+  },
+  {
+    title: 'Living Rooms',
+    cover: '/images/livingroom.jpeg',
+    images: [
+      { src: '/images/livingroom.jpeg', caption: 'Living Room Renovation' },
+      { src: '/images/livingroom2.jpeg', caption: 'Living Room Update' },
+    ],
+  },
+  {
+    title: 'Dining Rooms',
+    cover: '/images/DiningRoom.jpg',
+    images: [
+      { src: '/images/DiningRoom.jpg', caption: 'Dining Room Renovation' },
+      { src: '/images/DiningRoom2.jpg', caption: 'Dining Room' },
+    ],
+  },
+  {
+    title: 'Outdoor Spaces',
+    cover: '/images/Porch.jpg',
+    images: [
+      { src: '/images/Porch.jpg', caption: 'Porch' },
+      { src: '/images/Deck1.jpeg', caption: 'Deck' },
+      { src: '/images/outdoorstairs.jpeg', caption: 'Outdoor Stairs' },
+      { src: '/images/outdoorstairs2.jpeg', caption: 'Outdoor Stairs' },
+      { src: '/images/Outdoorstairs3.jpeg', caption: 'Outdoor Stairs' },
+    ],
+  },
+  {
+    title: 'Other Projects',
+    cover: '/images/littlehouse.jpg',
+    images: [
+      { src: '/images/littlehouse.jpg', caption: 'Hangout Space' },
+      { src: '/images/Stairwell.jpg', caption: 'Stairwell' },
+      { src: '/images/Hallway.jpeg', caption: 'Hallway' },
+    ],
+  },
 ]
 
-const filteredProjects = computed(() => {
-  if (activeFilter.value === 'All') return projects
-  return projects.filter(p => p.categories.includes(activeFilter.value))
+const activeSection = ref(null)
+const activeIndex = ref(0)
+
+function openSection(section) {
+  activeSection.value = section
+  activeIndex.value = 0
+}
+
+function closeModal() {
+  activeSection.value = null
+}
+
+function prev() {
+  activeIndex.value = (activeIndex.value - 1 + activeSection.value.images.length) % activeSection.value.images.length
+}
+
+function next() {
+  activeIndex.value = (activeIndex.value + 1) % activeSection.value.images.length
+}
+
+function handleBackdrop(e) {
+  if (e.target === e.currentTarget) closeModal()
+}
+
+const route = useRoute()
+onMounted(() => {
+  if (route.query.open) {
+    const match = sections.find(s => s.title === route.query.open)
+    if (match) openSection(match)
+  }
 })
 </script>
 
@@ -31,36 +102,88 @@ const filteredProjects = computed(() => {
 
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <!-- Filter Buttons -->
-      <div class="flex flex-wrap justify-center gap-3 mb-16" role="group" aria-label="Filter projects by category">
-        <button
-          v-for="filter in filters"
-          :key="filter"
-          @click="activeFilter = filter"
-          :aria-pressed="activeFilter === filter"
-          class="px-6 py-2.5 font-medium transition-all duration-300 text-sm uppercase tracking-wide border"
-          :class="activeFilter === filter ? 'bg-af-accent text-white border-af-accent' : 'bg-transparent text-af-text border-af-border hover:border-af-accent hover:text-af-accent'"
-        >
-          {{ filter }}
-        </button>
-      </div>
-
-      <!-- Project Grid -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <transition-group name="fade">
-          <div v-for="project in filteredProjects" :key="project.title" class="group relative overflow-hidden cursor-pointer aspect-[4/3] rounded-lg">
-              <img :src="project.image" :alt="project.title" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-              <div class="absolute inset-0 bg-af-dark/10"></div>
-              <div class="absolute inset-0 bg-gradient-to-t from-af-dark/80 via-transparent to-transparent"></div>
-              <div class="absolute bottom-0 left-0 right-0 p-6">
-                <span class="text-af-accent text-xs font-semibold uppercase tracking-wider">{{ project.categories.join(' / ') }}</span>
-                <h3 class="text-white font-heading font-bold text-lg mt-1">{{ project.title }}</h3>
-              </div>
+        <div
+          v-for="section in sections"
+          :key="section.title"
+          @click="openSection(section)"
+          class="group relative overflow-hidden cursor-pointer aspect-[4/3] rounded-lg"
+        >
+          <img
+            :src="section.cover"
+            :alt="section.title"
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-af-dark/80 via-af-dark/20 to-transparent"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <h3 class="text-white font-heading font-bold text-2xl drop-shadow-lg">{{ section.title }}</h3>
+            <span class="mt-2 text-af-accent text-xs font-semibold uppercase tracking-widest">
+              {{ section.images.length }} {{ section.images.length === 1 ? 'Photo' : 'Photos' }}
+            </span>
           </div>
-        </transition-group>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <Teleport to="body">
+    <div
+      v-if="activeSection"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+      @click="handleBackdrop"
+    >
+      <div class="relative w-full max-w-4xl bg-af-dark rounded-xl overflow-hidden shadow-2xl">
+        <!-- Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-af-border">
+          <h2 class="text-white font-heading font-bold text-xl">{{ activeSection.title }}</h2>
+          <button @click="closeModal" class="text-white/60 hover:text-white transition-colors text-2xl leading-none">&times;</button>
+        </div>
+
+        <!-- Image -->
+        <div class="relative aspect-[4/3] bg-black">
+          <img
+            :src="activeSection.images[activeIndex].src"
+            :alt="activeSection.images[activeIndex].caption"
+            class="absolute inset-0 w-full h-full object-contain"
+          >
+
+          <!-- Prev/Next (only if multiple images) -->
+          <template v-if="activeSection.images.length > 1">
+            <button
+              @click="prev"
+              class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+            >&#8249;</button>
+            <button
+              @click="next"
+              class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+            >&#8250;</button>
+          </template>
+        </div>
+
+        <!-- Footer -->
+        <div v-if="activeSection.images.length > 1" class="px-6 py-4 flex items-center justify-end">
+          <span class="text-white/50 text-sm">
+            {{ activeIndex + 1 }} / {{ activeSection.images.length }}
+          </span>
+        </div>
+
+        <!-- Thumbnails (only if multiple images) -->
+        <div v-if="activeSection.images.length > 1" class="flex gap-2 px-6 pb-5">
+          <button
+            v-for="(img, i) in activeSection.images"
+            :key="i"
+            @click="activeIndex = i"
+            class="w-16 h-12 rounded overflow-hidden border-2 transition-colors flex-shrink-0"
+            :class="activeIndex === i ? 'border-af-accent' : 'border-transparent opacity-60 hover:opacity-100'"
+          >
+            <img :src="img.src" :alt="img.caption" class="w-full h-full object-cover">
+          </button>
+        </div>
+      </div>
+    </div>
+  </Teleport>
 
   <CTASection />
 </template>

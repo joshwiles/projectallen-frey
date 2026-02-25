@@ -12,19 +12,25 @@ import CTASection from '@/components/CTASection.vue'
     compact
   />
 
-  <!-- Intro - Centered -->
+  <!-- Intro -->
   <section class="py-24 lg:py-32">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-      <div class="flex items-center justify-center gap-3 mb-5">
-        <div class="w-8 h-px bg-af-accent"></div>
-        <span class="text-af-accent font-medium text-sm uppercase tracking-widest-plus">Premium Quality</span>
-        <div class="w-8 h-px bg-af-accent"></div>
-      </div>
-      <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-4">Bathroom Design and Remodeling</h2>
-      <h3 class="text-xl font-heading font-semibold text-af-text mb-6">Is It Time to Remodel or Upgrade Your Bathroom?</h3>
-      <div class="space-y-5 text-af-gray text-lg leading-relaxed max-w-2xl mx-auto">
-        <p>Do you have a dated bathroom? Our team works hard to not only bring you a beautiful design, but a practical one. Updates can benefit both your eyes and your pocketbook when it comes to resell value and efficiency.</p>
-        <p>At Allen and Frey we understand this principle and implement it into every top-to-bottom, well-constructed, remodel that we do. You'll be glad you chose us!</p>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center">
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-px bg-af-accent"></div>
+            <span class="text-af-accent font-medium text-sm uppercase tracking-widest-plus">Premium Quality</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-4">Bathroom Design and Remodeling</h2>
+          <h3 class="text-xl font-heading font-semibold text-af-text mb-6">Is It Time to Remodel or Upgrade Your Bathroom?</h3>
+          <div class="space-y-5 text-af-gray leading-relaxed">
+            <p>Do you have a dated bathroom? Our team works hard to not only bring you a beautiful design, but a practical one. Updates can benefit both your eyes and your pocketbook when it comes to resell value and efficiency.</p>
+            <p>At Allen and Frey we understand this principle and implement it into every top-to-bottom, well-constructed, remodel that we do. You'll be glad you chose us!</p>
+          </div>
+        </div>
+        <div>
+          <img src="/images/Bathroom.jpg" alt="Bathroom remodel by Allen & Frey" class="w-full max-w-md mx-auto shadow-2xl" loading="lazy">
+        </div>
       </div>
     </div>
   </section>
@@ -101,20 +107,6 @@ import CTASection from '@/components/CTASection.vue'
     </div>
   </section>
 
-  <!-- Highlighted Quote -->
-  <section class="py-20 bg-af-dark">
-    <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-      <p class="text-white text-xl md:text-2xl font-heading font-semibold leading-relaxed">"A new bathroom will not only bring appeal and equity to your home, but protection from built-up contaminants as well as more needed functionality, sustainability, and safety to all who use it."</p>
-      <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 mt-10">
-        <router-link to="/get-started" class="bg-af-accent text-white px-10 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-af-accent-light transition-all duration-300">
-          Start Your Project
-        </router-link>
-        <a href="tel:5138716679" class="border border-white/30 text-white px-10 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-white/10 transition-all duration-300">
-          Call 513-871-6679
-        </a>
-      </div>
-    </div>
-  </section>
 
   <ProcessSection />
   <CTASection />

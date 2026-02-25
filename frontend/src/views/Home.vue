@@ -1,7 +1,13 @@
 <script setup>
+import { ref } from 'vue'
 import FeaturesSection from '@/components/FeaturesSection.vue'
 import ProcessSection from '@/components/ProcessSection.vue'
 import CTASection from '@/components/CTASection.vue'
+
+const carousel = ref(null)
+function scrollCarousel(dir) {
+  carousel.value.scrollBy({ left: dir * 360, behavior: 'smooth' })
+}
 
 const services = [
   {
@@ -36,13 +42,13 @@ const services = [
   }
 ]
 
-const projects = [
-  { title: 'The Overlook', category: 'Full Remodel', image: '/images/the-overlook-40-510x382.jpeg' },
-  { title: 'Oakley LEED Platinum', category: 'New Build', image: '/images/oakley-leed-platinum-build-01-400x284.jpeg' },
-  { title: 'Hyde Park Bath', category: 'Bathroom', image: '/images/hyde-park-bath-update-02-400x284.jpeg' },
-  { title: 'Hyde Park 3rd Floor', category: 'Bathroom', image: '/images/hyde-park-3rd-floor-bath-01-400x284.jpeg' },
-  { title: 'East Walnut Hills', category: 'Renovation', image: '/images/east-walnut-hille-project-01-400x284.jpeg' },
-  { title: 'Columbia Township', category: 'Deck', image: '/images/columbia-township-deck-06-400x284.jpeg' },
+const sections = [
+  { title: 'Bathrooms', cover: '/images/Bathroom.jpg', count: 2 },
+  { title: 'Kitchens', cover: '/images/Kitchen.jpg', count: 3 },
+  { title: 'Living Rooms', cover: '/images/livingroom.jpeg', count: 2 },
+  { title: 'Dining Rooms', cover: '/images/DiningRoom.jpg', count: 2 },
+  { title: 'Outdoor Spaces', cover: '/images/Porch.jpg', count: 5 },
+  { title: 'Other Projects', cover: '/images/littlehouse.jpg', count: 4 },
 ]
 
 const stats = [
@@ -57,7 +63,7 @@ const stats = [
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center -mt-20">
     <div class="absolute inset-0">
-      <img src="/images/columbia-township-deck-06-400x284.jpeg" alt="" class="w-full h-full object-cover" aria-hidden="true">
+      <img src="/images/DiningRoom2.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true">
       <div class="absolute inset-0 bg-gradient-to-r from-af-dark/95 via-af-dark/80 to-af-dark/40"></div>
     </div>
     <div class="relative max-w-7xl mx-auto px-6 lg:px-8 py-32 w-full">
@@ -165,8 +171,8 @@ const stats = [
 
   <!-- Recent Projects -->
   <section class="py-24 lg:py-32 bg-af-light">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-14">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between">
         <div>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-px bg-af-accent"></div>
@@ -179,13 +185,45 @@ const stats = [
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </router-link>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <router-link v-for="project in projects" :key="project.title" to="/gallery" class="group relative overflow-hidden aspect-[4/3]">
-          <img :src="project.image" :alt="project.title" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-af-dark/80 via-transparent to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-6">
-            <span class="text-af-accent text-xs font-semibold uppercase tracking-wider">{{ project.category }}</span>
-            <h3 class="text-white font-heading font-bold text-lg mt-1">{{ project.title }}</h3>
+    </div>
+
+    <!-- Scroll carousel with fade edges -->
+    <div class="relative max-w-7xl mx-auto">
+      <!-- Arrows -->
+      <button
+        @click="scrollCarousel(-1)"
+        class="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+        aria-label="Scroll left"
+      >
+        <svg class="w-5 h-5 text-af-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
+      <button
+        @click="scrollCarousel(1)"
+        class="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+        aria-label="Scroll right"
+      >
+        <svg class="w-5 h-5 text-af-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+
+      <div
+        ref="carousel"
+        class="flex gap-5 overflow-x-auto scroll-smooth pb-4 px-16"
+        style="scrollbar-width: none; -ms-overflow-style: none; mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);"
+      >
+        <router-link
+          v-for="section in sections"
+          :key="section.title"
+          :to="{ path: '/gallery', query: { open: section.title } }"
+          class="group relative flex-shrink-0 overflow-hidden cursor-pointer rounded-lg"
+          style="width: 340px; aspect-ratio: 4/3;"
+        >
+          <img :src="section.cover" :alt="section.title" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-af-dark/80 via-af-dark/20 to-transparent"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center">
+            <h3 class="text-white font-heading font-bold text-2xl drop-shadow-lg">{{ section.title }}</h3>
+            <span class="mt-2 text-af-accent text-xs font-semibold uppercase tracking-widest">
+              {{ section.count }} {{ section.count === 1 ? 'Photo' : 'Photos' }}
+            </span>
           </div>
         </router-link>
       </div>
