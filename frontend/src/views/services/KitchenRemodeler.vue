@@ -7,8 +7,8 @@ import CTASection from '@/components/CTASection.vue'
 <template>
   <PageHero
     subtitle="Our Services"
-    title="Kitchen Remodeler"
-    description="Allen & Frey is well known for creating professional top-to-bottom well-constructed remodels. We build kitchens beyond your dreams."
+    title="Kitchen Remodeling"
+    description="We are not your average every-day remodeling company. Our kitchens will go beyond your expectations. Let us wow your guests and potential future buyer with a fresh new redesign."
     compact
   />
 
@@ -21,11 +21,8 @@ import CTASection from '@/components/CTASection.vue'
             <div class="w-8 h-px bg-af-accent"></div>
             <span class="text-af-accent font-medium text-sm uppercase tracking-widest-plus">Premium Quality</span>
           </div>
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-6">The Dream Kitchen Remodeling Project</h2>
-          <div class="space-y-5 text-af-gray leading-relaxed">
-            <p>Your Dream Kitchen Can Become a Reality! We are not your average every-day remodeling company. Our kitchens will go beyond your expectations. We have the vision and talent to create the dream kitchen your home craves!</p>
-            <p>Are you a chef, an entertainer or a family with a determined vision? Allen & Frey is well known for creating professional top-to-bottom well-constructed remodels. Our design and build team understands that not all style requests will be the same. We build kitchens beyond your dreams.</p>
-          </div>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-4">Your Dream Kitchen Can Become a Reality</h2>
+          <p class="text-af-gray leading-relaxed">We have the vision and talent to create the dream kitchen your home craves! Are you a chef, an entertainer or a family with a determined vision? Allen & Frey is well known for creating professional top-to-bottom well-constructed remodels. Our design and build team understands that not all style requests will be the same. We build kitchens beyond your dreams.</p>
         </div>
         <div>
           <img src="/images/Kitchen.png" alt="Dream kitchen remodel by Allen & Frey" class="w-full max-w-md mx-auto shadow-2xl" loading="lazy">
@@ -49,7 +46,7 @@ import CTASection from '@/components/CTASection.vue'
         <!-- Countertops -->
         <div class="bg-white p-6 md:p-8 shadow-lg">
           <h3 class="text-xl font-heading font-bold text-af-text mb-4">Countertops</h3>
-          <p class="text-af-gray leading-relaxed">Trends are changing. The counter-tops of today vary greatly from the counter-tops of yesterday. Installing a clean updated look with a new counter-top can make all the difference. Granite counters are no longer the only premium choice. Quartz stone comes in colors and patterns that provide a clean look and are less porous. There has also been a return of the chunky butcher block counters. We can help you pick what's best for your home.</p>
+          <p class="text-af-gray leading-relaxed">Trends are changing. The counter-tops of today vary greatly from the counter-tops of yesterday. Installing a clean updated look with a new counter-top can make all the difference. Granite counters are no longer the only premium choice. Quartz stone comes in colors and patterns that provide a clean look and are less porous. There has also been a return of the chunky butcher block counters. We can help you pick what's best for your home and show you the proper maintenance to keep your countertops in shape.</p>
         </div>
         <!-- Cabinets -->
         <div class="bg-white p-6 md:p-8 shadow-lg">
@@ -85,7 +82,7 @@ import CTASection from '@/components/CTASection.vue'
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center">
         <div>
-          <img src="/images/Kitchen2.jpeg" alt="Kitchen layout redesign by Allen & Frey" class="w-full max-w-md mx-auto shadow-2xl" loading="lazy">
+          <img src="/images/Kitchen2.jpeg" alt="Kitchen layout redesign by Allen & Frey" class="w-full max-w-xs mx-auto shadow-2xl" loading="lazy">
         </div>
         <div>
           <div class="flex items-center gap-3 mb-4">
@@ -95,8 +92,6 @@ import CTASection from '@/components/CTASection.vue'
           <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-6">Knocking Down and Adding Walls</h2>
           <div class="space-y-5 text-af-gray leading-relaxed">
             <p>Let's recreate the kitchen layout! Is a wall getting in your way? Allow us to knock it down! Adding more open space to a kitchen area is the new trend among home building. It also allows for an easier time preparing and entertaining.</p>
-            <p class="font-semibold text-af-text text-lg">It's time to upgrade and remodel your kitchen to reflect your style!</p>
-            <p>Even if you don't cook all the time or spend a huge amount of time in this room it is beneficial to update the kitchen for raising the value and equity of your home in the future. A kitchen can make or break a home when trying to sell. Don't let yours become an eyesore on the market. Let us wow your guests and potential future buyer with a fresh new redesign!</p>
           </div>
         </div>
       </div>
