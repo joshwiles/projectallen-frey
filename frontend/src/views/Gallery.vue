@@ -15,10 +15,10 @@ const sections = [
   },
   {
     title: 'Kitchens',
-    cover: '/images/Kitchen.jpg',
+    cover: '/images/Kitchen.png',
     images: [
-      { src: '/images/Kitchen.jpg', caption: 'Kitchen Remodel' },
-      { src: '/images/Kitchen.jpeg', caption: 'Kitchen Renovation' },
+      { src: '/images/Kitchen.png', caption: 'Kitchen Remodel' },
+      { src: '/images/Kitchen.png', caption: 'Kitchen Renovation' },
       { src: '/images/Kitchen2.jpeg', caption: 'Kitchen Update' },
     ],
   },
@@ -115,7 +115,7 @@ onMounted(() => {
             class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             loading="lazy"
           >
-          <div class="absolute inset-0 bg-gradient-to-t from-af-dark/80 via-af-dark/20 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-af-dark via-af-dark/40 to-transparent"></div>
           <div class="absolute inset-0 flex flex-col items-center justify-center">
             <h3 class="text-white font-heading font-bold text-2xl drop-shadow-lg">{{ section.title }}</h3>
             <span class="mt-2 text-af-accent text-xs font-semibold uppercase tracking-widest">

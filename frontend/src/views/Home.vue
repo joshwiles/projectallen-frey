@@ -5,8 +5,9 @@ import ProcessSection from '@/components/ProcessSection.vue'
 import CTASection from '@/components/CTASection.vue'
 
 const carousel = ref(null)
+
 function scrollCarousel(dir) {
-  carousel.value.scrollBy({ left: dir * 360, behavior: 'smooth' })
+  carousel.value.scrollBy({ left: dir * 520, behavior: 'smooth' })
 }
 
 const services = [
@@ -44,7 +45,7 @@ const services = [
 
 const sections = [
   { title: 'Bathrooms', cover: '/images/Bathroom.jpg', count: 2 },
-  { title: 'Kitchens', cover: '/images/Kitchen.jpg', count: 3 },
+  { title: 'Kitchens', cover: '/images/Kitchen.png', count: 3 },
   { title: 'Living Rooms', cover: '/images/livingroom.jpeg', count: 2 },
   { title: 'Dining Rooms', cover: '/images/DiningRoom.jpg', count: 2 },
   { title: 'Outdoor Spaces', cover: '/images/Porch.jpg', count: 5 },
@@ -153,7 +154,7 @@ const stats = [
           </div>
           <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-6 leading-snug">Exceptional Craftsmanship & Attention to Detail</h2>
           <p class="text-af-gray mb-5 leading-relaxed">For nearly 40 years we have provided Cincinnati homeowners with the highest quality of service in the industry. Our attention to detail and willingness to go the extra mile provides our clients with the best building and remodeling experience possible.</p>
-          <p class="text-af-gray mb-8 leading-relaxed">Our approach to home renovation projects begins with our full-time project managers and carpenters. It leverages the experience and expertise of our trusted subcontractors and then allows our in-house painters and finishers to wrap up the job.</p>
+          <p class="text-af-gray mb-8 leading-relaxed">Our approach to home renovation projects begins with our full-time project managers and carpenters. It leverages the experience and expertise of our trusted subcontractors and then allows our in-house painters and finishers to wrap up the job. Our team is focused on providing the right resource at the right time for every project.</p>
           <router-link to="/about-us" class="inline-flex items-center bg-af-dark text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-af-accent transition-colors duration-300">
             Learn More About Us
             <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -173,13 +174,7 @@ const stats = [
   <section class="py-24 lg:py-32 bg-af-light">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-14">
       <div class="flex flex-col md:flex-row md:items-end md:justify-between">
-        <div>
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-8 h-px bg-af-accent"></div>
-            <span class="text-af-accent font-medium text-sm uppercase tracking-widest-plus">Portfolio</span>
-          </div>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-af-text">Recent Projects</h2>
-        </div>
+        <div></div>
         <router-link to="/gallery" class="mt-6 md:mt-0 inline-flex items-center text-af-accent font-semibold text-sm uppercase tracking-wide gap-2 hover:gap-3 transition-all duration-300">
           View All Projects
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -215,10 +210,10 @@ const stats = [
           :key="section.title"
           :to="{ path: '/gallery', query: { open: section.title } }"
           class="group relative flex-shrink-0 overflow-hidden cursor-pointer rounded-lg"
-          style="width: 340px; aspect-ratio: 4/3;"
+          style="width: 500px; aspect-ratio: 4/3;"
         >
           <img :src="section.cover" :alt="section.title" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-af-dark/80 via-af-dark/20 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-af-dark via-af-dark/40 to-transparent"></div>
           <div class="absolute inset-0 flex flex-col items-center justify-center">
             <h3 class="text-white font-heading font-bold text-2xl drop-shadow-lg">{{ section.title }}</h3>
             <span class="mt-2 text-af-accent text-xs font-semibold uppercase tracking-widest">
@@ -233,3 +228,4 @@ const stats = [
   <!-- CTA -->
   <CTASection />
 </template>
+

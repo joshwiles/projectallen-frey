@@ -13,6 +13,8 @@ const routes = [
   { path: '/gallery', name: 'Gallery', component: () => import('@/views/Gallery.vue'), meta: { title: 'Portfolio' } },
   { path: '/contact-us', name: 'Contact', component: () => import('@/views/Contact.vue'), meta: { title: 'Contact Us' } },
   { path: '/get-started', name: 'GetStarted', component: () => import('@/views/GetStarted.vue'), meta: { title: 'Get Started' } },
+  { path: '/privacy-policy', name: 'PrivacyPolicy', component: () => import('@/views/PrivacyPolicy.vue'), meta: { title: 'Privacy Policy' } },
+  { path: '/terms-and-conditions', name: 'TermsAndConditions', component: () => import('@/views/TermsAndConditions.vue'), meta: { title: 'Terms and Conditions' } },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('@/views/NotFound.vue'), meta: { title: 'Page Not Found' } },
 ]
 

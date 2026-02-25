@@ -28,7 +28,7 @@ import CTASection from '@/components/CTASection.vue'
           </div>
         </div>
         <div>
-          <img src="/images/Kitchen.jpeg" alt="Dream kitchen remodel by Allen & Frey" class="w-full max-w-md mx-auto shadow-2xl" loading="lazy">
+          <img src="/images/Kitchen.png" alt="Dream kitchen remodel by Allen & Frey" class="w-full max-w-md mx-auto shadow-2xl" loading="lazy">
         </div>
       </div>
     </div>

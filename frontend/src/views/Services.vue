@@ -29,7 +29,7 @@ import CTASection from '@/components/CTASection.vue'
           </router-link>
         </div>
         <div class="relative mx-auto w-3/4 overflow-hidden rounded-lg">
-          <img src="/images/Kitchen.jpeg" alt="Chef-quality kitchen remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <img src="/images/Kitchen.png" alt="Chef-quality kitchen remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
           <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
       </div>

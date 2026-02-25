@@ -14,7 +14,7 @@ defineProps({
           <div class="w-8 h-px bg-af-accent"></div>
         </div>
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-af-text mb-5">How We Work</h2>
-        <p class="text-af-gray max-w-2xl mx-auto leading-relaxed">We've developed a meticulous process designed to turn your vision into reality, keeping you informed every step of the way.</p>
+        <p class="text-af-gray max-w-2xl mx-auto leading-relaxed">We understand that every project is a reflection of your unique vision and lifestyle. That's why we've developed a meticulous process designed to turn your dreams into reality, keeping you informed every step of the way.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14">

@@ -11,7 +11,7 @@
         <div class="w-8 h-px bg-af-accent"></div>
       </div>
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-6">Ready For Your Next Project?</h2>
-      <p class="text-white/60 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">For nearly 40 years we have provided Cincinnati homeowners with the highest quality contractor service in the industry.</p>
+      <p class="text-white/60 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">For nearly 40 years we have provided Cincinnati homeowners with the highest quality contractor service in the industry. Our attention to detail and willingness to go the extra mile provides our clients with the best building and remodeling experience possible.</p>
       <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
         <router-link to="/get-started" class="bg-af-accent text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-af-accent-light transition-all duration-300 text-center">
           Start Your Project
