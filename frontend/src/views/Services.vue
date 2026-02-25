@@ -79,7 +79,7 @@ import CTASection from '@/components/CTASection.vue'
           </router-link>
         </div>
         <div class="relative overflow-hidden rounded-lg">
-          <img src="/images/east-walnut-hille-project-01-400x284.jpeg" alt="Room addition project by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <img src="/images/Deck1.jpeg" alt="Room addition project by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
           <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
       </div>
