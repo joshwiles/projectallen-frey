@@ -12,7 +12,8 @@ const form = ref({
   phone: '',
   preferredContact: '',
   subject: '',
-  message: ''
+  message: '',
+  website: ''
 })
 
 const submitted = ref(false)
@@ -30,7 +31,7 @@ async function handleSubmit() {
     })
     if (response.ok) {
       submitted.value = true
-      form.value = { name: '', email: '', phone: '', preferredContact: '', subject: '', message: '' }
+      form.value = { name: '', email: '', phone: '', preferredContact: '', subject: '', message: '', website: '' }
     } else {
       errorMessage.value = 'Something went wrong. Please try again or call us at (513) 871-6679.'
     }
@@ -58,21 +59,27 @@ async function handleSubmit() {
         {{ errorMessage }}
       </div>
 
+      <!-- Honeypot (hidden from real users, filled by bots) -->
+      <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+        <label for="contact-website">Website</label>
+        <input id="contact-website" v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
       <!-- Name -->
       <div>
         <label for="contact-name" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Name <span class="text-af-accent">*</span></label>
-        <input id="contact-name" v-model="form.name" type="text" required autocomplete="name" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Your full name">
+        <input id="contact-name" v-model="form.name" type="text" required autocomplete="name" maxlength="100" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Your full name">
       </div>
 
       <!-- Email & Phone -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label for="contact-email" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Email <span class="text-af-accent">*</span></label>
-          <input id="contact-email" v-model="form.email" type="email" required autocomplete="email" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="you@example.com">
+          <input id="contact-email" v-model="form.email" type="email" required autocomplete="email" maxlength="254" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="you@example.com">
         </div>
         <div>
           <label for="contact-phone" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Phone</label>
-          <input id="contact-phone" v-model="form.phone" type="tel" autocomplete="tel" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="(555) 123-4567">
+          <input id="contact-phone" v-model="form.phone" type="tel" autocomplete="tel" maxlength="30" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="(555) 123-4567">
         </div>
       </div>
 
@@ -98,13 +105,13 @@ async function handleSubmit() {
       <!-- Subject -->
       <div>
         <label for="contact-subject" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Subject <span class="text-af-accent">*</span></label>
-        <input id="contact-subject" v-model="form.subject" type="text" required class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="What is this regarding?">
+        <input id="contact-subject" v-model="form.subject" type="text" required maxlength="200" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="What is this regarding?">
       </div>
 
       <!-- Message -->
       <div>
         <label for="contact-message" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Message <span class="text-af-accent">*</span></label>
-        <textarea id="contact-message" v-model="form.message" required rows="5" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200 resize-y" placeholder="Tell us about your project..."></textarea>
+        <textarea id="contact-message" v-model="form.message" required rows="5" maxlength="5000" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200 resize-y" placeholder="Tell us about your project..."></textarea>
       </div>
 
       <button type="submit" :disabled="submitting" class="w-full sm:w-auto bg-af-accent text-white px-8 py-4 font-semibold text-sm uppercase tracking-wide hover:bg-af-accent-light transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">

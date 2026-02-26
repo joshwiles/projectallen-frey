@@ -10,7 +10,8 @@ const form = ref({
   bestTime: '',
   services: [],
   serviceAddress: '',
-  message: ''
+  message: '',
+  website: ''
 })
 
 const submitted = ref(false)
@@ -36,7 +37,7 @@ async function handleSubmit() {
     })
     if (response.ok) {
       submitted.value = true
-      form.value = { name: '', email: '', phone: '', preferredContact: '', bestTime: '', services: [], serviceAddress: '', message: '' }
+      form.value = { name: '', email: '', phone: '', preferredContact: '', bestTime: '', services: [], serviceAddress: '', message: '', website: '' }
     } else {
       errorMessage.value = 'Something went wrong. Please try again or call us at (513) 871-6679.'
     }
@@ -71,21 +72,27 @@ async function handleSubmit() {
           {{ errorMessage }}
         </div>
 
+        <!-- Honeypot (hidden from real users, filled by bots) -->
+        <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+          <label for="gs-website">Website</label>
+          <input id="gs-website" v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
         <!-- Name -->
         <div>
           <label for="gs-name" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Name <span class="text-af-accent">*</span></label>
-          <input id="gs-name" v-model="form.name" type="text" required autocomplete="name" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Your full name">
+          <input id="gs-name" v-model="form.name" type="text" required autocomplete="name" maxlength="100" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Your full name">
         </div>
 
         <!-- Email & Phone -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label for="gs-email" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Email <span class="text-af-accent">*</span></label>
-            <input id="gs-email" v-model="form.email" type="email" required autocomplete="email" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="you@example.com">
+            <input id="gs-email" v-model="form.email" type="email" required autocomplete="email" maxlength="254" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="you@example.com">
           </div>
           <div>
             <label for="gs-phone" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Phone</label>
-            <input id="gs-phone" v-model="form.phone" type="tel" autocomplete="tel" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="(555) 123-4567">
+            <input id="gs-phone" v-model="form.phone" type="tel" autocomplete="tel" maxlength="30" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="(555) 123-4567">
           </div>
         </div>
 
@@ -135,13 +142,13 @@ async function handleSubmit() {
         <!-- Service Address -->
         <div>
           <label for="gs-address" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Service Address</label>
-          <input id="gs-address" v-model="form.serviceAddress" type="text" autocomplete="street-address" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Address where work will be performed">
+          <input id="gs-address" v-model="form.serviceAddress" type="text" autocomplete="street-address" maxlength="300" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Address where work will be performed">
         </div>
 
         <!-- Message -->
         <div>
           <label for="gs-message" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Message <span class="text-af-accent">*</span></label>
-          <textarea id="gs-message" v-model="form.message" required rows="5" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200 resize-y" placeholder="Tell us about your project..."></textarea>
+          <textarea id="gs-message" v-model="form.message" required rows="5" maxlength="5000" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200 resize-y" placeholder="Tell us about your project..."></textarea>
         </div>
 
         <button type="submit" :disabled="submitting" class="w-full sm:w-auto bg-af-accent text-white px-8 py-4 font-semibold text-sm uppercase tracking-wide hover:bg-af-accent-light transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
