@@ -115,6 +115,7 @@ async function handleSubmit() {
               <option value="morning">Morning (8am – 12pm)</option>
               <option value="afternoon">Afternoon (12pm – 5pm)</option>
               <option value="evening">Evening (5pm – 8pm)</option>
+              <option value="weekends">Weekends</option>
               <option value="anytime">Anytime</option>
             </select>
           </div>
