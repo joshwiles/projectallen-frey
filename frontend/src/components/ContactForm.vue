@@ -10,7 +10,8 @@ const form = ref({
   name: '',
   email: '',
   phone: '',
-  service: '',
+  preferredContact: '',
+  subject: '',
   message: ''
 })
 
@@ -29,7 +30,7 @@ async function handleSubmit() {
     })
     if (response.ok) {
       submitted.value = true
-      form.value = { name: '', email: '', phone: '', service: '', message: '' }
+      form.value = { name: '', email: '', phone: '', preferredContact: '', subject: '', message: '' }
     } else {
       errorMessage.value = 'Something went wrong. Please try again or call us at (513) 871-6679.'
     }
@@ -57,37 +58,55 @@ async function handleSubmit() {
         {{ errorMessage }}
       </div>
 
+      <!-- Name -->
+      <div>
+        <label for="contact-name" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Name <span class="text-af-accent">*</span></label>
+        <input id="contact-name" v-model="form.name" type="text" required autocomplete="name" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Your full name">
+      </div>
+
+      <!-- Email & Phone -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label for="contact-name" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Name <span class="text-af-accent">*</span></label>
-          <input id="contact-name" v-model="form.name" type="text" required autocomplete="name" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Your full name">
-        </div>
         <div>
           <label for="contact-email" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Email <span class="text-af-accent">*</span></label>
           <input id="contact-email" v-model="form.email" type="email" required autocomplete="email" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="you@example.com">
         </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label for="contact-phone" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Phone</label>
           <input id="contact-phone" v-model="form.phone" type="tel" autocomplete="tel" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="(555) 123-4567">
         </div>
-        <div>
-          <label for="contact-service" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Service</label>
-          <select id="contact-service" v-model="form.service" class="w-full border border-af-border px-4 py-3 text-af-text focus:outline-none focus:border-af-accent transition-colors duration-200 bg-white">
-            <option value="">Select a service</option>
-            <option value="kitchen">Kitchen Remodeling</option>
-            <option value="bathroom">Bathroom Remodeling</option>
-            <option value="room-additions">Room Additions</option>
-            <option value="home-builder">Home Building</option>
-            <option value="home-maintenance">Home Maintenance</option>
-          </select>
+      </div>
+
+      <!-- Preferred Contact Method -->
+      <div>
+        <label class="block text-sm font-medium text-af-text mb-3 uppercase tracking-wide">Preferred Contact Method</label>
+        <div class="flex gap-6">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" v-model="form.preferredContact" value="email" class="accent-af-accent w-4 h-4">
+            <span class="text-af-gray text-sm">Email</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" v-model="form.preferredContact" value="phone" class="accent-af-accent w-4 h-4">
+            <span class="text-af-gray text-sm">Phone</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" v-model="form.preferredContact" value="either" class="accent-af-accent w-4 h-4">
+            <span class="text-af-gray text-sm">Either</span>
+          </label>
         </div>
       </div>
+
+      <!-- Subject -->
+      <div>
+        <label for="contact-subject" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Subject <span class="text-af-accent">*</span></label>
+        <input id="contact-subject" v-model="form.subject" type="text" required class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="What is this regarding?">
+      </div>
+
+      <!-- Message -->
       <div>
         <label for="contact-message" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Message <span class="text-af-accent">*</span></label>
         <textarea id="contact-message" v-model="form.message" required rows="5" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200 resize-y" placeholder="Tell us about your project..."></textarea>
       </div>
+
       <button type="submit" :disabled="submitting" class="w-full sm:w-auto bg-af-accent text-white px-8 py-4 font-semibold text-sm uppercase tracking-wide hover:bg-af-accent-light transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
         {{ submitting ? 'Sending...' : 'Send Message' }}
       </button>

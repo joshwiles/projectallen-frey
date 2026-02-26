@@ -7,8 +7,8 @@ import CTASection from '@/components/CTASection.vue'
 <template>
   <PageHero
     subtitle="Our Services"
-    title="Bathroom Remodeler"
-    description="Bathrooms can be improved for aesthetics and for functionality. Our team works hard to bring you a beautiful design and a practical one."
+    title="Bathroom Remodeling"
+    description="A new bathroom will not only bring appeal and equity to your home, but protection from built-up contaminants as well as more needed functionality, sustainability, and safety to all who use it."
     compact
   />
 

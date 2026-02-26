@@ -15,8 +15,8 @@ import ContactForm from '@/components/ContactForm.vue'
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
         <!-- Form -->
         <ContactForm
-          heading="Send Us a Message"
-          description="Whether you're ready to initiate a project or have questions about our services, the team at Allen & Frey Builders and Remodelers is here to help. Reach out to us through the form below."
+          heading="Leave Us a Message"
+          description="Whether you're ready to initiate a project or have questions about our services, the team at Allen & Frey Builders and Remodelers is here to help. Reach out to us through the form below, and let's start the conversation about transforming your home."
         />
 
         <!-- Contact Info -->
