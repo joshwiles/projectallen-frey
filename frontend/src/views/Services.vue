@@ -21,7 +21,7 @@ import CTASection from '@/components/CTASection.vue'
             <span class="text-af-accent font-medium text-sm uppercase tracking-widest-plus">Kitchens</span>
           </div>
           <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-5">Chef-Quality Kitchens</h2>
-          <p class="text-af-gray mb-4 leading-relaxed">The counter-tops of today vary greatly from the counter-tops of yesterday. namInstalling a clean updated look with a new counter-top can make all the difference. Kitchen cabinets are the crown of the room. We work with quality suppliers for semi-custom and custom cabinets.</p>
+          <p class="text-af-gray mb-4 leading-relaxed">The counter-tops of today vary greatly from the counter-tops of yesterday. Installing a clean updated look with a new counter-top can make all the difference. Kitchen cabinets are the crown of the room. We work with quality suppliers for semi-custom and custom cabinets.</p>
           <p class="text-af-gray mb-8 leading-relaxed">A creative back-splash not only adds style, elegance, and personality, but you can raise the value of your home most definitely. Create more counter space and a bonus of storage easily with an island. Need new appliances? Our kitchen design and remodeling team install and test them.</p>
           <router-link to="/services/kitchen-remodeler" class="inline-flex items-center bg-af-dark text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-af-accent transition-colors duration-300">
             Learn More
@@ -123,7 +123,7 @@ import CTASection from '@/components/CTASection.vue'
           </div>
           <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-5">Home Maintenance</h2>
           <p class="text-af-gray mb-4 leading-relaxed">Allen & Frey understands that a lot of homeowners don't have the time or knowledge to update their homes alone. Ever start a project and then halfway through realize that you should have called a professional? There are millions of people that get encouragement from YouTube or their neighbor that an update such as installing a new light fixture or doing some electrical wiring work can be done by the homeowner.</p>
-          <p class="text-af-gray mb-8 leading-relaxed">Now, don't get us wrong, some people are phenomenal at DIY. We commend you! For the rest, we are here for you. Don't take on more than you can bear. Let our home remodeling and home maintenance team take the burden of raising your homes equity. In the long run, you'll thank us!</p>
+          <p class="text-af-gray mb-8 leading-relaxed">Now, don't get us wrong, some people are phenomenal at DIY. We commend you! For the rest, we are here for you. Don't take on more than you can bear. Let our home remodeling and home maintenance team take the burden of raising your home's equity. In the long run, you'll thank us!</p>
           <router-link to="/services/home-maintenance" class="inline-flex items-center bg-af-dark text-white px-8 py-4 text-sm font-semibold uppercase tracking-wide hover:bg-af-accent transition-colors duration-300">
             Learn More
             <svg class="w-4 h-4 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>

@@ -56,19 +56,6 @@ import ContactForm from '@/components/ContactForm.vue'
             </div>
           </div>
 
-          <!-- Map -->
-          <div class="mt-8 overflow-hidden shadow-md">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3095.7!2d-84.5330!3d39.1050!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841b3f1c6c52d0d%3A0x0!2s1223+Budd+St%2C+Cincinnati%2C+OH+45203!5e0!3m2!1sen!2sus!4v1"
-              width="100%"
-              height="300"
-              style="border:0;"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Allen & Frey office location at 1223 Budd St, Cincinnati, OH 45203"
-            ></iframe>
-          </div>
         </div>
       </div>
     </div>
