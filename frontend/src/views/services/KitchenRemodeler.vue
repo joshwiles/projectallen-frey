@@ -24,8 +24,9 @@ import CTASection from '@/components/CTASection.vue'
           <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-4">Your Dream Kitchen Can Become a Reality</h2>
           <p class="text-af-gray leading-relaxed">We have the vision and talent to create the dream kitchen your home craves! Are you a chef, an entertainer or a family with a determined vision? Allen & Frey is well known for creating professional top-to-bottom well-constructed remodels. Our design and build team understands that not all style requests will be the same. We build kitchens beyond your dreams.</p>
         </div>
-        <div>
-          <img src="/images/Kitchen.png" alt="Dream kitchen remodel by Allen & Frey" class="w-full max-w-md mx-auto shadow-2xl" loading="lazy">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="/images/Kitchen.png" alt="Dream kitchen remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
       </div>
     </div>
@@ -81,8 +82,9 @@ import CTASection from '@/components/CTASection.vue'
   <section class="py-24 lg:py-32">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-16 items-center">
-        <div>
-          <img src="/images/Kitchen2.jpeg" alt="Kitchen layout redesign by Allen & Frey" class="w-full max-w-xs mx-auto shadow-2xl" loading="lazy">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="/images/Kitchen2.jpeg" alt="Kitchen layout redesign by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
         <div>
           <div class="flex items-center gap-3 mb-4">

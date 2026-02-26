@@ -28,8 +28,9 @@ import CTASection from '@/components/CTASection.vue'
             <p>At Allen and Frey we understand this principle and implement it into every top-to-bottom, well-constructed, remodel that we do. You'll be glad you chose us!</p>
           </div>
         </div>
-        <div>
-          <img src="/images/Bathroom.jpg" alt="Bathroom remodel by Allen & Frey" class="w-full max-w-md mx-auto shadow-2xl" loading="lazy">
+        <div class="relative overflow-hidden rounded-lg">
+          <img src="/images/Bathroom.jpg" alt="Bathroom remodel by Allen & Frey" class="w-full shadow-2xl" loading="lazy">
+          <div class="absolute inset-0 bg-af-dark/10"></div>
         </div>
       </div>
     </div>
