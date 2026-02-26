@@ -25,7 +25,7 @@ import CTASection from '@/components/CTASection.vue'
           <h3 class="text-xl font-heading font-semibold text-af-text mb-6">Is It Time to Remodel or Upgrade Your Bathroom?</h3>
           <div class="space-y-5 text-af-gray leading-relaxed">
             <p>Do you have a dated bathroom? Our team works hard to not only bring you a beautiful design, but a practical one. Updates can benefit both your eyes and your pocketbook when it comes to resell value and efficiency.</p>
-            <p>At Allen and Frey we understand this principle and implement it into every top-to-bottom, well-constructed, remodel that we do. You'll be glad you chose us!</p>
+            <p>At Allen & Frey we understand this principle and implement it into every top-to-bottom, well-constructed, remodel that we do. You'll be glad you chose us!</p>
           </div>
         </div>
         <div class="relative overflow-hidden rounded-lg">
@@ -103,7 +103,7 @@ import CTASection from '@/components/CTASection.vue'
         </div>
       </div>
       <div class="mt-12 text-center">
-        <p class="text-af-gray text-lg max-w-2xl mx-auto">Let us take that stress off your shoulders! Your newly remodeled bathroom will be beautiful and functional. Allen and Frey have been remodeling bathrooms for years!</p>
+        <p class="text-af-gray text-lg max-w-2xl mx-auto">Let us take that stress off your shoulders! Your newly remodeled bathroom will be beautiful and functional. Allen & Frey have been remodeling bathrooms for years!</p>
       </div>
     </div>
   </section>

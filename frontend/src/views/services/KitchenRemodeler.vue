@@ -8,7 +8,7 @@ import CTASection from '@/components/CTASection.vue'
   <PageHero
     subtitle="Our Services"
     title="Kitchen Remodeling"
-    description="We are not your average every-day remodeling company. Our kitchens will go beyond your expectations. Let us wow your guests and potential future buyer with a fresh new redesign."
+    description="We are not your average everyday remodeling company. Our kitchens will go beyond your expectations. Let us wow your guests and potential future buyers with a fresh new redesign."
     compact
   />
 
