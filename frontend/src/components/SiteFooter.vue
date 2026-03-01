@@ -2,12 +2,14 @@
   <footer class="bg-af-dark text-white">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
+
         <!-- Logo & Description -->
         <div class="lg:col-span-1">
           <router-link to="/" aria-label="Allen & Frey - Home">
             <img src="/images/allen-frey-logo-02.png" alt="Allen & Frey" class="h-12 mb-5" width="180" height="48">
           </router-link>
-          <p class="text-white/50 text-sm leading-relaxed mb-6">Premium home builders and remodelers serving Cincinnati for nearly 40 years with uncompromising quality.</p>
+          <p class="text-white/50 text-sm leading-relaxed mb-3">Cincinnati's locally owned home builders and remodelers since 1985. Real neighbors, real quality, right here in your community.</p>
+          <p class="text-af-accent text-xs font-medium uppercase tracking-wide mb-5">Not a franchise. Locally owned &amp; operated.</p>
           <div class="flex gap-3">
             <a href="https://www.facebook.com/www.allenbuilders.us/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 border border-white/15 flex items-center justify-center hover:border-af-accent hover:bg-af-accent/10 transition-all duration-300" aria-label="Follow us on Facebook">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -22,11 +24,11 @@
         <div>
           <h3 class="text-sm font-semibold uppercase tracking-widest-plus mb-6 text-white/80">Services</h3>
           <ul class="space-y-3">
+            <li><router-link to="/services/room-additions" class="text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">Room Additions</router-link></li>
+            <li><router-link to="/services/home-builder" class="text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">New Construction</router-link></li>
             <li><router-link to="/services/kitchen-remodeler" class="text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">Kitchen Remodeling</router-link></li>
             <li><router-link to="/services/bathroom-remodeler" class="text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">Bathroom Remodeling</router-link></li>
-            <li><router-link to="/services/room-additions" class="text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">Room Additions</router-link></li>
-            <li><router-link to="/services/home-builder" class="text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">Home Building</router-link></li>
-            <li><router-link to="/services/home-maintenance" class="text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">Home Maintenance</router-link></li>
+            <li><router-link to="/services/home-improvement" class="text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">Home Improvement</router-link></li>
           </ul>
         </div>
 
@@ -46,8 +48,8 @@
 
         <!-- Contact -->
         <div>
-          <h3 class="text-sm font-semibold uppercase tracking-widest-plus mb-6 text-white/80">Contact</h3>
-          <ul class="space-y-4">
+          <h3 class="text-sm font-semibold uppercase tracking-widest-plus mb-6 text-white/80">Contact Us</h3>
+          <ul class="space-y-4 mb-8">
             <li>
               <a href="tel:5138716679" class="flex items-center gap-3 text-white/50 hover:text-af-accent transition-colors duration-300 text-sm">
                 <svg class="w-4 h-4 text-af-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -65,6 +67,10 @@
               <address class="not-italic">1223 Budd St<br>Cincinnati, OH 45203</address>
             </li>
           </ul>
+          <div class="pt-4 border-t border-white/10">
+            <p class="text-white/30 text-xs uppercase tracking-wide mb-2">Serving Greater Cincinnati</p>
+            <p class="text-white/40 text-xs leading-relaxed">Hyde Park · Mount Lookout · Indian Hill · Anderson · Blue Ash · Oakley · Mt. Adams &amp; beyond</p>
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import PageHero from '@/components/PageHero.vue'
 import FeaturesSection from '@/components/FeaturesSection.vue'
 import ProcessSection from '@/components/ProcessSection.vue'
 import CTASection from '@/components/CTASection.vue'
+import TestimonialsSection from '@/components/TestimonialsSection.vue'
 
 const videoRef = ref(null)
 let observer = null
@@ -31,7 +32,7 @@ onUnmounted(() => {
   <PageHero
     subtitle="About Us"
     title="About Allen & Frey"
-    description="Communication and responsiveness are at the heart of our philosophy. We pride ourselves on our ability to provide each client with project information they need when they need it."
+    description="For over 40 years, Allen & Frey has been Cincinnati's locally owned, full-service contractor. Real neighbors. Real quality. Right here in your community."
   />
 
   <!-- Main About -->
@@ -41,17 +42,17 @@ onUnmounted(() => {
         <div>
           <div class="flex items-center gap-3 mb-4">
             <div class="w-8 h-px bg-af-accent"></div>
-            <span class="text-af-accent font-medium text-sm uppercase tracking-widest-plus">Your Local Full-Service Contractor</span>
+            <span class="text-af-accent font-medium text-sm uppercase tracking-widest-plus">Proudly Cincinnati-Based</span>
           </div>
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-6 leading-snug">Nearly 40 Years of Excellence in Cincinnati</h2>
-          <p class="text-af-gray mb-5 leading-relaxed">For nearly 40 years we have provided Cincinnati homeowners with the highest quality of service in the industry. Our attention to detail and willingness to go the extra mile provides our clients with the best building and remodeling experience possible.</p>
-          <p class="text-af-gray leading-relaxed">Our approach to home renovation projects begins with our full-time project managers and carpenters. It leverages the experience and expertise of our trusted subcontractors and then allows our in-house painters and finishers to wrap up the job. Our team is focused on providing the right resource at the right time for every project.</p>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text mb-6 leading-snug">40 Years Serving Cincinnati's Neighborhoods</h2>
+          <p class="text-af-gray mb-5 leading-relaxed">We grew up here. We live here. And we build here. Allen & Frey is a family-owned contractor that has called Greater Cincinnati home since 1985 — not because it's a business decision, but because this community is ours too.</p>
+          <p class="text-af-gray leading-relaxed">Our team of full-time project managers, master carpenters, and trusted subcontractors brings together decades of local experience on every project. When you hire Allen & Frey, you're not hiring a national chain. You're hiring your neighbors.</p>
         </div>
         <div class="relative">
           <img src="/images/allen-and-frey-img-01.png" alt="Allen & Frey construction team at work" class="w-full shadow-2xl" loading="lazy" width="600" height="450">
           <div class="absolute -bottom-6 -right-6 bg-af-accent text-white p-6 hidden lg:block">
-            <div class="text-3xl font-heading font-bold">40+</div>
-            <div class="text-sm uppercase tracking-wide">Years of Excellence</div>
+            <div class="text-3xl font-heading font-bold">1985</div>
+            <div class="text-sm uppercase tracking-wide">Founded in Cincinnati</div>
           </div>
         </div>
       </div>
@@ -88,18 +89,20 @@ onUnmounted(() => {
             <span class="text-af-accent font-medium text-sm uppercase tracking-widest-plus">Our Reputation</span>
             <div class="w-8 h-px bg-af-accent"></div>
           </div>
-          <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text">Outstanding Reputation</h2>
+          <h2 class="text-3xl md:text-4xl font-heading font-bold text-af-text">Built on Word of Mouth</h2>
         </div>
         <div class="space-y-6 text-af-gray leading-relaxed">
-          <p>We have a reputation for delivering outstanding customer service and uncompromising quality on every project we undertake. Our construction professionals have the ultimate experience and expertise in high-end remodeling projects. Each of our project managers has over ten years of experience and we employ over 30 master carpenters. We have instilled a level of professional management and integrity in the construction process that is rare in most commercial companies.</p>
-          <p>We use only the highest quality professional subcontractors and suppliers and have spent numerous years developing these relationships. Every member of the Allen & Frey team takes great personal pride in delivering the finest craftsmanship, uncompromising attention to detail and outstanding customer service on every luxury residence we build or renovate.</p>
-          <p>At Allen & Frey, we take safety standards and environmental issues seriously. Everyone on the team is trained monthly on OSHA health and safety regulations. We hold the highest standard of safety for the homeowners and the staff. In addition to safety, we also believe in the green movement. The Allen & Frey design and build team takes personal responsibility to stay green by using green products and recycling for all of our projects.</p>
+          <p>In a city like Cincinnati, reputation is everything. Our next client is usually a neighbor of the last one — which is exactly why we're obsessive about quality, communication, and follow-through on every project we take on.</p>
+          <p>Our construction professionals bring the ultimate expertise in high-end remodeling and new builds. Each project manager has over a decade of local experience, and we employ over 30 master carpenters. We've built a level of professional integrity in the construction process that's rare in an industry dominated by national franchises.</p>
+          <p>We use only the highest-quality local subcontractors and suppliers — relationships built over decades, not contracts signed in a boardroom. Every member of the Allen & Frey team takes personal pride in delivering outstanding craftsmanship, meticulous attention to detail, and genuine customer care on every project.</p>
+          <p>At Allen & Frey, we take safety and sustainability seriously. Our entire team trains monthly on OSHA health and safety standards, and we actively incorporate green building practices and recycled materials into our projects wherever possible.</p>
         </div>
       </div>
     </div>
   </section>
 
   <FeaturesSection />
+  <TestimonialsSection />
   <ProcessSection />
   <CTASection />
 </template>

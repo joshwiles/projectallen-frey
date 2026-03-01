@@ -7,7 +7,7 @@ import ContactForm from '@/components/ContactForm.vue'
   <PageHero
     subtitle="Get In Touch"
     title="Contact Us"
-    description="Contact the Allen & Frey Builders and Remodelers team to get started."
+    description="Questions about a project? Ready to get a quote? We're your local Cincinnati neighbors — give us a call or drop us a message."
   />
 
   <section class="py-24 lg:py-32">
@@ -15,8 +15,8 @@ import ContactForm from '@/components/ContactForm.vue'
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
         <!-- Form -->
         <ContactForm
-          heading="Leave Us a Message"
-          description="Whether you're ready to initiate a project or have questions about our services, the team at Allen & Frey Builders and Remodelers is here to help. Reach out to us through the form below, and let's start the conversation about transforming your home."
+          heading="Send Us a Message"
+          description="Whether you're ready to kick off a project or just exploring options, our team is here to help. Fill out the form below and someone from our local Cincinnati team will be in touch shortly."
         />
 
         <!-- Contact Info -->
@@ -54,8 +54,12 @@ import ContactForm from '@/components/ContactForm.vue'
                 </div>
               </div>
             </div>
-          </div>
 
+            <div class="mt-10 pt-8 border-t border-af-border">
+              <p class="text-xs text-af-gray uppercase tracking-widest-plus mb-3">Serving Greater Cincinnati</p>
+              <p class="text-af-gray text-sm leading-relaxed">Hyde Park · Mount Lookout · Indian Hill · Anderson Township · Blue Ash · Oakley · Mount Adams · Mariemont &amp; beyond</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

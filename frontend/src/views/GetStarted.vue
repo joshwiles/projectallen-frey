@@ -19,11 +19,11 @@ const submitting = ref(false)
 const errorMessage = ref('')
 
 const serviceOptions = [
+  { value: 'room-additions', label: 'Room Additions' },
+  { value: 'home-builder', label: 'New Construction' },
   { value: 'kitchen', label: 'Kitchen Remodeling' },
   { value: 'bathroom', label: 'Bathroom Remodeling' },
-  { value: 'room-additions', label: 'Room Additions' },
-  { value: 'home-builder', label: 'Home Building' },
-  { value: 'home-maintenance', label: 'Home Maintenance' },
+  { value: 'home-improvement', label: 'Home Improvement' },
 ]
 
 async function handleSubmit() {
@@ -52,19 +52,19 @@ async function handleSubmit() {
 <template>
   <PageHero
     subtitle="Start Your Project"
-    title="Get Started"
-    description="Contact the Allen & Frey Builders and Remodelers team to get started on your next project."
+    title="Get a Free Quote"
+    description="Tell us about your project and a member of our local Cincinnati team will be in touch to discuss next steps — no pressure, no obligation."
   />
 
   <section class="py-24 lg:py-32">
     <div class="max-w-3xl mx-auto px-6 lg:px-8">
       <h3 class="text-2xl font-heading font-bold text-af-text mb-2">Request a Free Quote</h3>
-      <p class="text-af-gray mb-8 leading-relaxed">Are you ready to enhance your home? At Allen & Frey Builders and Remodelers, we make it easy for you to get started. Request a free quote today, and let our team provide you with a detailed assessment and estimate for your next project.</p>
+      <p class="text-af-gray mb-8 leading-relaxed">Ready to get started? Fill out the form below and one of our Cincinnati-based team members will reach out to schedule a consultation and provide a detailed estimate — completely free and no obligation.</p>
 
       <div v-if="submitted" class="border border-af-accent/30 bg-af-accent/5 p-6 md:p-10 text-center">
         <svg class="w-14 h-14 text-af-accent mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/></svg>
-        <h4 class="text-xl font-heading font-bold text-af-text mb-2">Thank You</h4>
-        <p class="text-af-gray">We've received your request and will get back to you shortly.</p>
+        <h4 class="text-xl font-heading font-bold text-af-text mb-2">Thank You!</h4>
+        <p class="text-af-gray">We've received your request. A member of our local team will be in touch shortly.</p>
       </div>
 
       <form v-else @submit.prevent="handleSubmit" class="space-y-6" novalidate>
@@ -92,7 +92,7 @@ async function handleSubmit() {
           </div>
           <div>
             <label for="gs-phone" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Phone</label>
-            <input id="gs-phone" v-model="form.phone" type="tel" autocomplete="tel" maxlength="30" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="(555) 123-4567">
+            <input id="gs-phone" v-model="form.phone" type="tel" autocomplete="tel" maxlength="30" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="(513) 555-1234">
           </div>
         </div>
 
@@ -142,13 +142,13 @@ async function handleSubmit() {
         <!-- Service Address -->
         <div>
           <label for="gs-address" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Service Address</label>
-          <input id="gs-address" v-model="form.serviceAddress" type="text" autocomplete="street-address" maxlength="300" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Address where work will be performed">
+          <input id="gs-address" v-model="form.serviceAddress" type="text" autocomplete="street-address" maxlength="300" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200" placeholder="Where will the work be performed?">
         </div>
 
         <!-- Message -->
         <div>
-          <label for="gs-message" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Message <span class="text-af-accent">*</span></label>
-          <textarea id="gs-message" v-model="form.message" required rows="5" maxlength="5000" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200 resize-y" placeholder="Tell us about your project..."></textarea>
+          <label for="gs-message" class="block text-sm font-medium text-af-text mb-2 uppercase tracking-wide">Project Details <span class="text-af-accent">*</span></label>
+          <textarea id="gs-message" v-model="form.message" required rows="5" maxlength="5000" class="w-full border border-af-border px-4 py-3 text-af-text placeholder-af-gray/50 focus:outline-none focus:border-af-accent transition-colors duration-200 resize-y" placeholder="Tell us about your project — scope, timeline, anything that helps us understand what you're looking for..."></textarea>
         </div>
 
         <button type="submit" :disabled="submitting" class="w-full sm:w-auto bg-af-accent text-white px-8 py-4 font-semibold text-sm uppercase tracking-wide hover:bg-af-accent-light transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">

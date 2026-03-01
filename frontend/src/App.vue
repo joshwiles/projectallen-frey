@@ -6,7 +6,7 @@ import SiteFooter from './components/SiteFooter.vue'
 <template>
   <div id="app" class="font-body">
     <SiteHeader />
-    <div class="h-20"></div>
+    <div class="h-[100px]"></div>
     <main>
       <router-view v-slot="{ Component }">
         <component :is="Component" :key="$route.path" />

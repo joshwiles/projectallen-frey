@@ -7,18 +7,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        'af-dark': '#1a1a2e',
-        'af-navy': '#16213e',
+        'af-dark': '#0f1f3d',
         'af-accent': '#c9a84c',
-        'af-accent-light': '#d4b85c',
-        'af-light': '#f8f9fa',
-        'af-warm': '#faf8f5',
+        'af-accent-light': '#d4b95e',
+        'af-light': '#f4f2ee',
+        'af-warm': '#ece9e0',
         'af-gray': '#6b7280',
-        'af-text': '#1f2937',
-        'af-border': '#e5e7eb',
+        'af-text': '#1a2436',
+        'af-border': '#e2ddd4',
       },
       fontFamily: {
-        'heading': ['"Playfair Display"', 'Georgia', 'serif'],
+        'heading': ['"Outfit"', 'system-ui', 'sans-serif'],
         'body': ['"Inter"', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {

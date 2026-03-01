@@ -6,13 +6,13 @@ defineProps({
   compact: Boolean,
   image: {
     type: String,
-    default: '/images/the-overlook-40-510x382.jpeg'
+    default: '/images/DiningRoom2.jpg'
   }
 })
 </script>
 
 <template>
-  <section :class="['relative bg-af-dark text-white -mt-20 overflow-hidden', compact ? 'py-14 md:py-18' : 'py-28 md:py-36']">
+  <section :class="['relative bg-af-dark text-white -mt-[100px] overflow-hidden', compact ? 'py-14 md:py-20' : 'py-28 md:py-36']">
     <div class="absolute inset-0 opacity-20">
       <img :src="image" alt="" class="w-full h-full object-cover" aria-hidden="true">
     </div>
